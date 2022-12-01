@@ -107,4 +107,5 @@ def remove_curso(id):
 	return redirect(url_for('lista_cursos'))
 
 if __name__ =="__main__":
+	db.create_all()
 	app.run(debug=True)
