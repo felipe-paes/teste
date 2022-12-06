@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='/static/insert.css' />
+    <title>Adicionar</title>
+</head>
+<body>
+    <div>
+        <h1 id="titulo">Adicione seu Herói</h1>
+        <p id="subtitulo">Complete as informações</p>
+        <br>
+    </div>
+    {%block conteudo%}
+    <form method= "POST">
+        <fieldset class="grupo">
+            <div class="campo">
+                <label for="name"><strong>Nome</strong></label>
+                <input type="text" name="name" id="name" required>
+            </div>
+            <div class="campo">
+                <label for="especie"><strong>Especie</strong></label>
+                <input type="text" name="especie" id="especie" required>
+            </div>
+            <div class="campo">
+                <label for="dono"><strong>Dono</strong></label>
+                <input type="text" name="dono" id="dono" required>
+            </div>
+        </fieldset>
+        <button class="botao" type="submit" > Salvar</button>
+    </form>
+    {%endblock%}
+</body>
+</html>

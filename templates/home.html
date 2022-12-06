@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+        <link rel="stylesheet" href='/static/main.css' />
+    <title>Home</title>
+</head>
+<body>
+    <h1><span class="blue">&lt;</span>Lista de Animais<span class="blue">&gt;</span> <span class="yellow">(DC e Marvel)</pan></h1>
+        <table class="container">
+            <thead>
+                <tr>
+                    <th><h1>Nome</h1></th>
+                    <th><h1>Especie</h1></th>
+                    <th><h1>Dono</h1></th>
+                </tr>
+            </thead>
+            <tbody>
+                {%for table in table%}
+                <tr>
+                    <td>{{table['name']}}</td>
+                    <td>{{table['especie']}}</td>
+                    <td>{{table['dono']}}</td>
+                </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+        <div class="buttons">
+            <a href="remove" class="button" type="button">Remover</a><br>
+            <a href="alternate" class="button" type="button">Alterar</a>
+            <a href="insert" class="button" type="button">Adicionar</a>
+        </div>
+</body>
+</html>
