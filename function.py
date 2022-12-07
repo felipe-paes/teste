@@ -6,7 +6,7 @@ def insert(name, especie, dono):
         writer = csv.DictWriter(file_out, fieldnames=fieldnames)
         writer.writerow({'name': name, 'especie': especie, 'dono': dono})
 
-def remove(i):
+def deletar(i):
     i += 1
     with open('hotel.csv', 'r') as file_in:
         lines = file_in.readlines()
@@ -18,7 +18,7 @@ def remove(i):
                 pointer += 1
     return
 
-def alternate(i, name, especie, dono):
-    remove(i)
+def alterar(i, name, especie, dono):
+    deletar(i)
     insert(name, especie, dono)
     return

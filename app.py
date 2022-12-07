@@ -40,24 +40,24 @@ def insertlayout():
     return render_template("insert.html")
 
 
-@app.route("/remove", methods=['GET', 'POST'])
-def remove():
+@app.route("/deletar", methods=['GET', 'POST'])
+def deletar():
     if request.method == 'POST':
         i = request.form['i']
-        function.remove(int(i))
+        function.deletar(int(i))
         return redirect("/home")
-    return render_template('remove.html')
+    return render_template('deletar.html')
 
 
-@app.route("/alternate", methods=['GET', 'POST'])
-def alternate():
+@app.route("/alterar", methods=['GET', 'POST'])
+def alterar():
     if request.method == 'POST':
         i = request.form['i']
         name = request.form['name']
         especie = request.form['especie']
         dono = request.form['dono']
-        function.alternate(int(i), name, especie, dono)
+        function.alterar(int(i), name, especie, dono)
         return redirect("/home")
-    return render_template('alternate.html')
+    return render_template('alterar.html')
 
 app.run(debug=True)
