@@ -1,15 +1,23 @@
 from flask import Flask, render_template, request, url_for, redirect
 import function, csv
 
-app = Flask(__name__, template_folder='templates', static_folder='static')
+app = Flask(__name__)
 
-def update():
-    with open('hotel.csv', newline='') as file_in:
-        reader = csv.DictReader(file_in)
-        table = []
+def formulario():
+    tasks = []
+    with open('hotel.csv') as csv_file:
+        reader = csv.reader(csv_file, delimiter=",")
+        first_line = True
         for row in reader:
-            table += [row]
-        return table
+            if not first_line:
+                tasks.append({
+                    "name": row[0],
+                    "especie": row[1],
+                    "dono": row[2],
+                })
+            else:
+                first_line = False
+    return tasks
 
 @app.route('/')
 def login():
@@ -18,7 +26,7 @@ def login():
 
 @app.route("/home", methods=['GET', 'POST'])
 def home():
-    return render_template('home.html', table=update())
+    return render_template('home.html', tasks=formulario())
 
 
 @app.route("/insert", methods=['GET', 'POST'])
@@ -52,5 +60,4 @@ def alternate():
         return redirect("/home")
     return render_template('alternate.html')
 
-if __name__ == '__main__':
-    app.run(debug=True)
+app.run(debug=True)

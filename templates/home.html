@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width>, initial-scale=1.0">
-        <link rel="stylesheet" href='/static/home.css' />
+        <link rel="stylesheet" href='/static/styles/home.css' />
     <title>Home</title>
 </head>
 <body>
-    <h1><span class="blue">&lt;</span>Lista de Animais<span class="blue">&gt;</span>
+    <h1>Lista de Animais</h1>
         <table class="container">
             <thead>
                 <tr>
@@ -18,13 +18,13 @@
                 </tr>
             </thead>
             <tbody>
-                {%for table in table%}
+                {% for task in tasks %}
                 <tr>
-                    <td>{{table['name']}}</td>
-                    <td>{{table['especie']}}</td>
-                    <td>{{table['dono']}}</td>
+                    <td><h2>{{task.name}}</h2></td>
+                    <td><h2>{{task.especie}}</h2></td>
+                    <td><h2>{{task.dono}}</h2></td>
                 </tr>
-                {%endfor%}
+                {% endfor %}
             </tbody>
         </table>
         <div class="buttons">
