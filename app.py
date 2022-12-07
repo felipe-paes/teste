@@ -29,15 +29,15 @@ def home():
     return render_template('home.html', tasks=formulario())
 
 
-@app.route("/insert", methods=['GET', 'POST'])
-def insertlayout():
+@app.route("/create", methods=['GET', 'POST'])
+def create():
     if request.method == 'POST':
         name = request.form['name']
         especie = request.form['especie']
         dono = request.form['dono']   
-        function.insert(name, especie, dono)
+        function.create(name, especie, dono)
         return redirect("/home")
-    return render_template("insert.html")
+    return render_template("create.html")
 
 
 @app.route("/deletar", methods=['GET', 'POST'])

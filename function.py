@@ -1,6 +1,6 @@
 import csv
 
-def insert(name, especie, dono):
+def create(name, especie, dono):
     with open('hotel.csv', 'at', newline='') as file_out:
         fieldnames = ['name', 'especie', 'dono']
         writer = csv.DictWriter(file_out, fieldnames=fieldnames)
