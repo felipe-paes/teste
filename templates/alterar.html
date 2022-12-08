@@ -4,38 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href='/static/styles/alterar.css' />
+    <link rel="stylesheet" href='/static/styles/create.css' />
+    <link rel="stylesheet" href='/static/styles/login.css'/>
     <title>Alterar</title>
 </head>
 <body>
+    <div class="esquerda" id="div">
+        <img class="arte" src="/static/assets/undraw_fish_bowl_uu88.svg">
+    </div>
+    <div class="direita" id="div">
     <div>
-        <h1 id="titulo">Altere as informações</h1>
-        <p id="subtitulo">somente o ID é necessário preencher</p>
+        <h1 id="title">Altere as informações<br></h1>
+        <h1 id="title2"> sobre o seu pet!</h1>
         <br>
     </div>
     {%block conteudo%}
-    <form method="POST">
-        <fieldset class="grupo" >
-            <div class="campo">
-                <label for="i"><strong>Digite a linha a ser alterada</strong></label>
-                <input type="text" name="i" id="i" required>
+    <form method= "POST">
+        <fieldset class="group">
+            <div class="camp">
+                <label for="i"><strong>Linha</strong></label>
+                <input type="text" name="i" id="i" placeholder="Linha a ser alterada" required>
             </div>
-            <div class="campo">
+            <div class="camp">
                 <label for="name"><strong>Nome</strong></label>
-                <input type="text" name="name" id="name" >
+                <input type="text" name="name" id="name" placeholder="Nome do Pet" required>
             </div>
-            <div class="campo">
+            <div class="camp">
                 <label for="especie"><strong>Especie</strong></label>
-                <input type="text" name="especie" id="especie" >
+                <input type="text" name="especie" id="especie" placeholder="Pet" required>
             </div>
-            <div class="campo">
+            <div class="camp">
                 <label for="dono"><strong>Dono</strong></label>
-                <input type="text" name="dono" id="dono" >
+                <input type="text" name="dono" id="dono" placeholder="Nome do Dono" required>
             </div>
-            </div>
-        </fieldset>
-            <button class="botao" type="submit" > Salvar</button>
+            <button class="buttom" type="submit" > Salvar</button><br><br><br>
+            <a class="btn-voltar" href="home" style="text-align: center;">Voltar</a>
+        </fieldset>  
     </form>
     {%endblock%}
+    </div>
 </body>
 </html>

@@ -1,97 +1,132 @@
 *{
     margin: 0;
     padding: 0;
-}
-
-#titulo{
-    font-family: sans-serif;
-    color: #4DC3FA;
-    margin-left: -10%;
-}
-
-#subtitulo{
-    font-family: sans-serif;
-    color: #FFF842;
-    margin-left: -5%;
 
 }
 
-fieldset { 
-    border: 0;
+#title{
+    font-family: 'Nunito', sans-serif;
+    color: #044C5B;
+    margin-left: 5%;
+}
+#title2{
+    font-family: 'Nunito', sans-serif;
+    color: #044C5B;
+    margin-left: 15%;
 }
 
+
+fieldset{
+    border:0;
+
+}
 body{
-    background-color: #1F2739;
-    font-family: sans-serif;
+    background-color: #ffff;
+    font-family:'Poppins' sans-serif;
     font-size: 1em;
-    color: #A7A1AE;
-    
-    margin-left: 46%;
+    color: #2d2d2d;
+    /*margin-left: 36%;
     margin-top: 2%;
-    justify-content: center;
+    justify-content: flex-end;*/
 }
 
 input, select, textarea, button{
+    border: 1px solid #959393;
     border-radius: 5px;
+  
 }
 
-.campo {
+.camp{
+    margin-left: 10%;
     margin-bottom: 1em;
+
 }
 
-.campo label{
-    margin-top: 15%;
-    margin-bottom: 0.2em;
-    color: #527ad7;
+.camp label{
+    margin-top: 0.2em;
+    color: #2d2d2d;
     display: block;
 }
 
-fieldset.grupo {
+fieldset.group.camp{
+
     float: left;
     margin-right: 1em;
+}
+
+.petImage{
+    margin-top: 45px;
+    width: 200px;
+    height: 130px;
+    margin-left: 18%;
+    justify-content: flex-end ;
+
+}
+
+input{
+    font-family: 'Poppins' sans-serif;
+    font-size: medium;
+    height: 33px;
+    width: 300px;
+    justify-content: flex-end;
+}
+
+.buttom{
+    margin-left: 10%;
+    height: 40px;
+    width: 300px;
+    background-color: #347483;
+    color: #ffff;
+    font-family: 'Poppins' sans-serif;
+    font-size:large;
     
 }
 
-.campo input[type="text"], .campo select, .campo textarea {
-    padding: 0.2em;
-    border: 1px solid #5875b8;
-    box-shadow: 2px 2px 2px rgb(0,0,0,0.2);
-    display: block;
+button:hover{
+    background-color: #044C5B;
 }
 
-.campo select option{
-    padding-right: 1em;
+.nome{
+    font-family:Arial, Helvetica, sans-serifs;
 }
 
-.campo input:focus, .campo select:focus, .campo textarea:focus {
-    background:  #326bf1;
+.check-in{
+    font-family: 'Poppins' sans-serif;
+    font-weight: lighter;
+    color: #959393;
 }
 
-.botao {
-    font-size: 1.2em;
-    background: #2C3446;
-    border: 0;
-    margin-bottom: 1em;
-    color: white;
-    padding: 0.2em 0.6em;
-    box-shadow: 2px 2px 2px rgb(0,0,0,0.2);
-    text-shadow: rgb(0,0,0,0.2);
-    position: sticky;
-    top: 80%;
-    left: 52%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
+.esquerda{
+    
+    float: left;
+    background-color:#02677e;
+    width: 735px;
+    height: 746px;
+    
 }
 
-.botao:hover {
-    background: #6495ED;
-    box-shadow: inset 2px 2px 2px rgb(0,0,0,0.2);
-    text-shadow: none;
+.direita{
+    
+    float: right;
+    margin-top: 130px;
+    background-color: #ffff;
+    width: 560px;
+    height: 746px;
+   
 }
 
-.botao, select{
-    cursor: pointer;
+input[type="date"]{
+
+    font-family: "Popping" sans-serif;
+    font-size: 20px;
+    background-color: #ffff;
+    color: #474646;
+    font-size:medium ;
 }
-input {
-	background-color: #39445a;
+
+.arte{
+    justify-content: center;
+    margin-left: 5%;
+    width: 90%;
+    height: 90%;
 }

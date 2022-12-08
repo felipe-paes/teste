@@ -4,25 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href='/static/styles/deletar.css' />
-    <title>Remover</title>
+    <link rel="stylesheet" href='/static/styles/create.css' />
+    <link rel="stylesheet" href='/static/styles/login.css'/>
+    <title>Alterar</title>
 </head>
 <body>
+    <div class="esquerda" id="div">
+        <img class="arte" src="/static/assets/undraw_friends_r511.svg">
+    </div>
+    <div class="direita" id="div">
     <div>
-        <h1 id="titulo">Remova um Animal</h1>
-        <p id="subtitulo">Digite a linha para remoção</p>
+        <h1 id="title">Remover o Pet<br></h1>
         <br>
     </div>
     {%block conteudo%}
-    <form method="POST">
-        <fieldset class="grupo">
-            <div class="campo">
+    <form method= "POST">
+        <fieldset class="group">
+            <div class="camp">
                 <label for="i"><strong>Linha</strong></label>
-                <input type="text" name="i" id="i" required>
+                <input type="text" name="i" id="i" placeholder="Linha a ser alterada" required>
             </div>
-        </fieldset>
-        <button class="botao" type="submit" > Remover</button>
+            <button class="buttom" type="submit" > Salvar</button><br><br><br>
+            <a class="btn-voltar" href="home" style="text-align: center;">Voltar</a>
+        </fieldset>  
     </form>
     {%endblock%}
+    </div>
 </body>
 </html>

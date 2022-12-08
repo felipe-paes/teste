@@ -20,5 +20,5 @@ def deletar(i):
 
 def alterar(i, name, especie, dono):
     deletar(i)
-    insert(name, especie, dono)
+    create(name, especie, dono)
     return
