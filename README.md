@@ -1,3 +1,5 @@
 Felipe Paes Souza / Gabrielle Vitoria da silva
 
-O nosso CRUD tem o objetivo de adicionar um animal, junto com as informações de seu nome, a especie e o nome do dono deste animal
+Nosso sistema é um CRUD para um hotel de animais, cujo objetivo é adicionar as informações de Nome, Especie, e Dono.
+
+PARA ACESSAR O SISTEMA NA TELA DE LOGIN CLIQUE NO BOTÃO CONTINUAR
